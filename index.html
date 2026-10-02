@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreteFácil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Frete<span>Fácil</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#consulta">Consultar</a>
+            <a href="#como-funciona">Como funciona</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-text">
+                <span class="tag">ENTREGA RÁPIDA E SIMPLES</span>
+                <h1>Calcule seu <span>frete</span> pelo CEP</h1>
+                <p>
+                    Consulte o endereço, descubra a distância até a UNINASSAU
+                    Parangaba e veja uma estimativa do valor da entrega.
+                </p>
+                <a href="#consulta" class="hero-button">Calcular agora</a>
+            </div>
+
+            <div class="hero-card">
+                <div class="motorcycle">🏍️</div>
+                <h3>Entrega por moto</h3>
+                <p>Estimativa baseada na distância percorrida.</p>
+            </div>
+        </section>
+
+        <section class="consulta" id="consulta">
+            <div class="section-title">
+                <span>CONSULTA</span>
+                <h2>Calcule seu frete</h2>
+                <p>Digite o CEP do destino para começar.</p>
+            </div>
+
+            <form id="freteForm">
+                <div class="input-area">
+                    <label for="cep">CEP de destino</label>
+                    <div class="cep-input">
+                        <input
+                            type="text"
+                            id="cep"
+                            placeholder="Ex.: 60740-020"
+                            maxlength="9"
+                            required
+                        >
+                        <button type="submit">Calcular</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Consultando endereço e calculando distância...</p>
+            </div>
+
+            <div id="erro" class="erro hidden"></div>
+
+            <div id="resultado" class="resultado hidden">
+
+                <div class="endereco">
+                    <div class="location-icon">📍</div>
+                    <div>
+                        <span>DESTINO</span>
+                        <h3 id="enderecoCompleto">-</h3>
+                        <p id="cepResultado">-</p>
+                    </div>
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-icon">📍</div>
+                        <span>DISTÂNCIA</span>
+                        <strong id="distancia">0 km</strong>
+                        <small>Da UNINASSAU até o destino</small>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🏍️</div>
+                        <span>UBER MOTO</span>
+                        <strong id="uber">R$ 0,00</strong>
+                        <small>Estimativa baseada na distância</small>
+                    </div>
+
+                    <div class="card destaque">
+                        <div class="card-icon">💰</div>
+                        <span>FRETE ESTIMADO</span>
+                        <strong id="frete">R$ 0,00</strong>
+                        <small>Valor estimado da entrega</small>
+                    </div>
+
+                </div>
+
+                <div class="aviso">
+                    <strong>Importante</strong>
+                    <p>
+                        O valor apresentado é uma estimativa para fins de cálculo.
+                        O preço real de serviços de transporte pode variar.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="como-funciona" id="como-funciona">
+            <div class="section-title">
+                <span>PROCESSO</span>
+                <h2>Como funciona?</h2>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div>01</div>
+                    <h3>Digite o CEP</h3>
+                    <p>Informe o CEP do local onde a entrega será realizada.</p>
+                </div>
+
+                <div class="step">
+                    <div>02</div>
+                    <h3>Localizamos</h3>
+                    <p>A API consulta automaticamente os dados do endereço.</p>
+                </div>
+
+                <div class="step">
+                    <div>03</div>
+                    <h3>Calculamos</h3>
+                    <p>A distância entre a UNINASSAU e o destino é calculada.</p>
+                </div>
+
+                <div class="step">
+                    <div>04</div>
+                    <h3>Resultado</h3>
+                    <p>Você recebe uma estimativa do valor do frete.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FreteFácil © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
